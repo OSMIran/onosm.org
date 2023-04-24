@@ -11,13 +11,13 @@ const circleRadiusMeters = 50;
 
 function reloadLists(language) {
 
-  $.getJSON('./locales/' + language + '/categories.json')
+  $.getJSON('./locales/fa-IR/categories.json')
     .success(function (data) {
       category_data = data;
     })
     .fail(function () {
       // 404? Fall back to en-US
-      $.getJSON('./locales/en-US/categories.json')
+      $.getJSON('./locales/fa-IR/categories.json')
       .success(function (data) {
         category_data = data;
       });
